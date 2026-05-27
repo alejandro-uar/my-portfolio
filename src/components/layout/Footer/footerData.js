@@ -17,4 +17,9 @@ export const socialLinks = [
     url: "https://github.com/alejandro-luna",
     icon: "github",
   },
+  {
+    name: "TikTok",
+    url: "https://www.tiktok.com/@alejandro.luna",
+    icon: "tiktok",
+  },
 ]

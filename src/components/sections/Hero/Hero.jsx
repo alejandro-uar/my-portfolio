@@ -4,62 +4,74 @@ const Hero = ({ onScroll }) => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center bg-linear-to-br from-slate-900 via-blue-950 to-slate-950 text-white pt-20"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-deep-900 pt-20"
     >
-      <div className="text-center max-w-5xl px-4">
+      {/* Animated gradient bg */}
+      <div className="absolute inset-0 bg-gradient-to-br from-deep-900 via-deep-800/60 to-deep-900 animate-gradient bg-[length:200%_200%]" />
 
+      {/* Grid overlay */}
+      <div className="absolute inset-0 grid-pattern opacity-30" />
+
+      {/* Glow accents */}
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-brand-violet/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-brand-cyan/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-cyan/5 rounded-full blur-3xl" />
+
+      <div className="relative z-10 text-center max-w-5xl px-4">
         {/* Badge */}
-        <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-green-500/20 border border-green-400 mb-8">
-          <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-          <span className="text-green-300 font-semibold">
+        <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-brand-emerald/10 border border-brand-emerald/30 mb-8 animate-fade-in-up opacity-0" style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}>
+          <span className="w-2 h-2 bg-brand-emerald rounded-full animate-pulse" />
+          <span className="text-brand-emerald font-semibold text-sm">
             Disponible para nuevos proyectos
           </span>
         </div>
 
-        {/* Title */}
-        <h1 className="text-6xl md:text-8xl font-black mb-6">
-          <span className="bg-linear-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
+        {/* Name */}
+        <h1 className="text-5xl sm:text-6xl md:text-8xl font-black mb-4 tracking-tight animate-fade-in-up opacity-0" style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}>
+          <span className="bg-gradient-to-r from-brand-violet via-brand-cyan to-brand-emerald bg-clip-text text-transparent">
             Alejandro Luna
           </span>
         </h1>
 
-        {/* Subtitle */}
-        <div className="flex flex-wrap justify-center gap-4 text-2xl md:text-4xl font-bold mb-6">
-          <span>Técnico en Informática</span>
-          <span className="text-blue-400">|</span>
-          <span className="text-cyan-400">Developer Web</span>
+        {/* Role */}
+        <div className="mb-8 animate-fade-in-up opacity-0" style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}>
+          <span className="text-2xl md:text-4xl font-bold text-slate-200">
+            Backend <span className="text-brand-cyan">&</span> Fullstack Developer
+          </span>
         </div>
 
         {/* Description */}
-        <p className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto">
-          Especializado en <span className="text-blue-400 font-semibold">backend</span> con Node.js y NestJS,
-          APIs REST y sistemas fullstack.
+        <p className="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-10 animate-fade-in-up opacity-0" style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}>
+          Especializado en{" "}
+          <span className="text-brand-cyan font-semibold">backend</span> con
+          Node.js y NestJS, APIs REST y sistemas fullstack. Construyo soluciones
+          escalables de principio a fin.
         </p>
 
         {/* Buttons */}
-        <div className="mt-10 flex justify-center gap-6">
+        <div className="flex flex-wrap justify-center gap-4 animate-fade-in-up opacity-0" style={{ animationDelay: "0.5s", animationFillMode: "forwards" }}>
           <button
             onClick={() => onScroll("projects")}
-            className="px-8 py-4 bg-linear-to-r from-blue-600 to-cyan-600 rounded-lg font-bold hover:scale-105 transition shadow-lg"
+            className="px-8 py-4 bg-gradient-to-r from-brand-violet to-brand-cyan rounded-lg font-bold hover:scale-105 hover:shadow-lg hover:shadow-brand-cyan/25 transition-all"
           >
             Ver Proyectos
           </button>
 
           <button
             onClick={() => onScroll("contact")}
-            className="px-8 py-4 border border-slate-600 rounded-lg hover:bg-slate-800 transition"
+            className="px-8 py-4 border border-border-400 rounded-lg font-medium hover:bg-surface-700 hover:border-brand-cyan/50 transition-all"
           >
             Contactar
           </button>
         </div>
 
-        {/* Social icons */}
-        <div className="mt-14 flex justify-center gap-6">
+        {/* Social */}
+        <div className="mt-14 flex justify-center gap-6 animate-fade-in-up opacity-0" style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}>
           <SocialIcon icon="github" />
           <SocialIcon icon="linkedin" />
+          <SocialIcon icon="tiktok" />
           <SocialIcon icon="mail" />
         </div>
-
       </div>
     </section>
   )

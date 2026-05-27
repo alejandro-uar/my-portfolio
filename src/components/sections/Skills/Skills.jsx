@@ -1,38 +1,39 @@
+import useReveal from "../../../hooks/useReveal"
 import skillsData from "./skillsData"
-import SkillCategoryCard from "./SkillCategoryCard"
+import StackLayer from "./StackLayer"
 
 const Skills = () => {
+  const [titleRef, titleVisible] = useReveal()
+
   return (
-    <section
-      id="skills"
-      className="min-h-screen bg-slate-900 py-24 px-6 text-white"
-    >
-      <div className="max-w-7xl mx-auto">
+    <section id="skills" className="min-h-screen bg-deep-900 py-24 px-6 text-white">
+      <div className="max-w-5xl mx-auto">
+        <div
+          ref={titleRef}
+          className={`text-center mb-16 ${titleVisible ? "animate-fade-in-up" : "opacity-0"}`}
+        >
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-4">
+            Stack <span className="text-brand-cyan">Tecnológico</span>
+          </h2>
+          <p className="text-slate-400 max-w-2xl mx-auto">
+            Así está compuesto mi stack de desarrollo — de la interfaz al servidor
+          </p>
+        </div>
 
-        {/* Title */}
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-          Habilidades <span className="text-blue-400">Técnicas</span>
-        </h2>
-
-        <p className="text-center text-slate-400 mb-16">
-          Stack tecnológico y herramientas con las que trabajo
-        </p>
-
-        {/* Grid */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="space-y-0">
           {skillsData.map((category, index) => (
-            <SkillCategoryCard key={index} category={category} />
+            <StackLayer key={index} category={category} index={index} />
           ))}
         </div>
 
         {/* Languages */}
-        <div className="mt-20 flex justify-center">
-          <div className="bg-slate-900/70 border border-slate-700 rounded-2xl px-8 py-6 text-center">
-            <h3 className="text-lg font-semibold mb-2">Idiomas</h3>
-            <p className="text-slate-300">
-              <span className="text-blue-400">Español:</span> Nativo •{" "}
-              <span className="text-blue-400">Inglés:</span> A2 (En constante aprendizaje)
-            </p>
+        <div className="mt-16 text-center">
+          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-deep-800 border border-border-500">
+            <span className="text-sm text-slate-400">Idiomas</span>
+            <span className="text-slate-300 text-sm">
+              <span className="text-brand-cyan font-semibold">Inglés:</span> A2
+              <span className="text-slate-500"> — En constante aprendizaje</span>
+            </span>
           </div>
         </div>
       </div>
