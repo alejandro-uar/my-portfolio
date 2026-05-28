@@ -5,11 +5,6 @@ export const contactInfo = [
     icon: "mail",
   },
   {
-    label: "Teléfono",
-    value: "3875614895",
-    icon: "phone",
-  },
-  {
     label: "Ubicación",
     value: "Salta Capital, Argentina",
     icon: "map",
@@ -19,7 +14,7 @@ export const contactInfo = [
 export const socialLinks = [
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/alejandro-luna",
+    url: "https://www.linkedin.com/in/alejandro-luna-72020b208",
     icon: "linkedin",
   },
   {

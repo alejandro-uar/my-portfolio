@@ -6,7 +6,7 @@ const Skills = () => {
   const [titleRef, titleVisible] = useReveal()
 
   return (
-    <section id="skills" className="min-h-screen bg-deep-900 py-24 px-6 text-white">
+    <section id="skills" className="bg-deep-900 py-24 px-6 text-white">
       <div className="max-w-5xl mx-auto">
         <div
           ref={titleRef}

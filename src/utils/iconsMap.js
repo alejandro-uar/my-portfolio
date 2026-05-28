@@ -10,7 +10,7 @@ export const socialIcons = {
 
 export const socialUrls = {
   github: "https://github.com/alejandro-luna",
-  linkedin: "https://www.linkedin.com/in/alejandro-luna-72020b208",
+  linkedin: "https://www.linkedin.com/in/alejandro-luna",
   mail: "mailto:alejandro2002.uar@gmail.com",
   tiktok: "https://www.tiktok.com/@alejandro.luna",
 }

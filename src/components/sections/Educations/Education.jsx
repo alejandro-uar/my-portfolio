@@ -1,4 +1,5 @@
 import useReveal from "../../../hooks/useReveal"
+import { GraduationCap, Award } from "lucide-react"
 import educationData from "./educationData"
 import coursesData from "./coursesData"
 import EducationCard from "./EducationCard"
@@ -7,7 +8,7 @@ const Education = () => {
   const [titleRef, titleVisible] = useReveal()
 
   return (
-    <section id="education" className="min-h-screen bg-deep-900 py-24 px-6 text-white">
+    <section id="education" className="bg-deep-900 py-24 px-6 text-white">
       <div className="max-w-7xl mx-auto">
         <div
           ref={titleRef}
@@ -22,7 +23,7 @@ const Education = () => {
           {/* Educación Formal */}
           <div>
             <h3 className="flex items-center gap-2 text-lg font-semibold mb-6 text-slate-200 font-heading">
-              <span className="text-blue-400">🎓</span> Educación Formal
+              <GraduationCap size={22} className="text-blue-400" /> Educación Formal
             </h3>
             <div className="space-y-6">
               {educationData.map((item, index) => (
@@ -34,7 +35,7 @@ const Education = () => {
           {/* Cursos */}
           <div>
             <h3 className="flex items-center gap-2 text-lg font-semibold mb-6 text-slate-200 font-heading">
-              <span className="text-amber-400">🏅</span> Cursos y Certificaciones
+              <Award size={22} className="text-amber-400" /> Cursos y Certificaciones
             </h3>
 
             <div className="bg-deep-800/70 border border-border-500 rounded-2xl p-6 space-y-4">
@@ -52,15 +53,6 @@ const Education = () => {
               ))}
             </div>
 
-            <div className="mt-8 bg-brand-emerald/5 border border-brand-emerald/20 rounded-2xl p-6">
-              <h4 className="text-brand-emerald font-semibold mb-2 font-heading">
-                Aprendizaje Continuo
-              </h4>
-              <p className="text-slate-300 text-sm">
-                Constantemente actualizándome con las últimas tecnologías y
-                mejores prácticas del desarrollo web y la informática.
-              </p>
-            </div>
           </div>
         </div>
       </div>

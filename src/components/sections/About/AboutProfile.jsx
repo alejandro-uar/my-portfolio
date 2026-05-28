@@ -1,35 +1,31 @@
-import Card from "../../ui/Card"
-
 const AboutProfile = () => {
   return (
-    <Card title="Perfil Profesional">
-      <div className="space-y-4 text-slate-300 leading-relaxed">
-        <p>
-          Soy un <span className="text-brand-cyan font-semibold">Developer Web</span> con experiencia
-          en la creación de interfaces gráficas y el desarrollo de servicios backend y
-          <span className="text-brand-violet font-semibold"> APIs REST</span>.
-        </p>
-
-        <p>
-          Mi especialización principal está en el
-          <span className="text-brand-violet font-semibold"> desarrollo backend</span> con tecnologías
-          como Node.js, NestJS y Express, aunque con el tiempo he adquirido experiencia sólida
-          en frontend con React y Next.js.
-        </p>
-
-        <p>
-          Poseo conocimientos en arquitecturas modulares, gestión de bases de datos
-          (PostgreSQL, MongoDB, MariaDB) y seguridad. Mi perfil se complementa con una
-          sólida base técnica en informática, soporte técnico y sistemas operativos
-          Windows / Linux.
-        </p>
-
-        <p>
-          Esta combinación de habilidades me permite abordar proyectos de software con una
-          visión integral, desde la infraestructura hasta la experiencia del usuario final.
-        </p>
+    <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+      <div className="flex flex-col items-center lg:items-start gap-4 lg:col-span-1">
+        <div className="w-36 h-36 rounded-full bg-gradient-to-br from-brand-violet via-brand-cyan to-brand-emerald p-[3px] shadow-lg shadow-brand-violet/20">
+          <div className="w-full h-full rounded-full bg-deep-800 flex items-center justify-center">
+            <span className="text-3xl font-black text-transparent bg-gradient-to-r from-brand-violet to-brand-cyan bg-clip-text">
+              AL
+            </span>
+          </div>
+        </div>
+        <div className="text-center lg:text-left">
+          <p className="text-white font-semibold text-lg">Alejandro Luna</p>
+          <p className="text-slate-400 text-sm">Fullstack Developer</p>
+        </div>
       </div>
-    </Card>
+
+      <div className="lg:col-span-4 bg-deep-800/80 border border-border-500 rounded-xl p-6 shadow-lg">
+        <div className="space-y-4 text-slate-300 leading-relaxed">
+          <p>
+            Soy un Developer Web con experiencia en la creación de interfaces de usuario y el desarrollo de servicios backend mediante APIs REST. Mi enfoque principal está en el desarrollo backend con tecnologías como Node.js, NestJS y Express, complementando mi perfil con experiencia práctica en el frontend utilizando React y Next.js.
+          </p>
+          <p>
+            Además, cuento con una base técnica sólida en soporte IT, redes y sistemas operativos Windows/Linux. Esta combinación me permite abordar proyectos con una visión integral.
+          </p>
+        </div>
+      </div>
+    </div>
   )
 }
 

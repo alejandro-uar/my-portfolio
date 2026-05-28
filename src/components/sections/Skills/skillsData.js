@@ -34,6 +34,7 @@ const skillsData = [
       "PHP",
       "Laravel",
       "REST APIs",
+      "WebHooks",
     ],
   },
   {
@@ -42,14 +43,14 @@ const skillsData = [
     color: "text-purple-400",
     skills: [
       "PostgreSQL",
-      "MongoDB",
-      "MariaDB",
       "TypeORM",
-      "Mongoose",
+      "Prisma",
+      "Mysql",
+      "Eloquent ORM",
     ],
   },
   {
-    title: "Herramientas & DevOps",
+    title: "Herramientas",
     icon: Wrench,
     color: "text-orange-400",
     skills: [
@@ -58,24 +59,11 @@ const skillsData = [
       "Docker",
       "Linux",
       "Jest",
-      "Postman",
+      "Insomnia",
       "Swagger",
-      "TeamViewer",
-    ],
-  },
-  {
-    title: "Metodologías",
-    icon: Users,
-    color: "text-pink-400",
-    skills: ["Scrum", "Agile", "Atomic Design", "Trello", "Miro"],
-  },
-  {
-    title: "Soporte Técnico",
-    icon: Headphones,
-    color: "text-yellow-400",
-    skills: [
+      "Trello", 
+      "Jira",
       "Windows",
-      "Linux",
       "macOS",
       "Hardware",
       "Redes LAN",
@@ -83,6 +71,12 @@ const skillsData = [
       "Cisco Packet Tracer",
     ],
   },
+  {
+    title: "Metodologías",
+    icon: Users,
+    color: "text-pink-400",
+    skills: ["Scrum", "Agile", "Atomic Design","Singleton", "MVC", "MVVM"],
+  }
 ]
 
 export default skillsData

@@ -1,54 +1,72 @@
-import { MapPin, Mail, Phone, Linkedin, Github } from "lucide-react"
-import Card from "../../ui/Card"
+import { MapPin, Mail, Linkedin, Github } from "lucide-react"
+
+const contactItems = [
+  {
+    icon: MapPin,
+    label: "Ubicación",
+    value: "Salta Capital, Argentina",
+    href: null
+  },
+  {
+    icon: Mail,
+    label: "Email",
+    value: "alejandro2002.uar@gmail.com",
+    href: "mailto:alejandro2002.uar@gmail.com"
+  },
+  {
+    icon: Linkedin,
+    label: "LinkedIn",
+    value: "Alejandro Luna",
+    href: "https://www.linkedin.com/in/alejandro-luna"
+  },
+  {
+    icon: Github,
+    label: "GitHub",
+    value: "@alejandro-luna",
+    href: "https://github.com/alejandro-luna"
+  }
+]
 
 const AboutContact = () => {
   return (
-    <Card title="Información de Contacto">
-      <ul className="space-y-4 text-slate-300">
-        <li className="flex items-center gap-3">
-          <MapPin className="text-brand-cyan shrink-0" size={20} />
-          Salta Capital, Argentina
-        </li>
-
-        <li className="flex items-center gap-3">
-          <Mail className="text-brand-cyan shrink-0" size={20} />
-          <a href="mailto:alejandro2002.uar@gmail.com" className="hover:text-brand-cyan transition">
-            alejandro2002.uar@gmail.com
-          </a>
-        </li>
-
-        <li className="flex items-center gap-3">
-          <Phone className="text-brand-cyan shrink-0" size={20} />
-          <a href="tel:3875614895" className="hover:text-brand-cyan transition">
-            3875614895
-          </a>
-        </li>
-
-        <li className="flex items-center gap-3">
-          <Linkedin className="text-brand-cyan shrink-0" size={20} />
-          <a
-            href="https://www.linkedin.com/in/alejandro-luna-72020b208"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-brand-cyan transition"
-          >
-            LinkedIn Profile
-          </a>
-        </li>
-
-        <li className="flex items-center gap-3">
-          <Github className="text-brand-cyan shrink-0" size={20} />
-          <a
-            href="https://github.com/alejandro-luna"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-brand-cyan transition"
-          >
-            GitHub Profile
-          </a>
-        </li>
+    <div className="bg-deep-800/80 border border-border-500 rounded-xl p-6 shadow-lg h-full">
+      <h3 className="text-lg font-semibold mb-5 text-white font-heading flex items-center gap-2">
+        <span className="w-1 h-5 bg-brand-cyan rounded-full" />
+        Información de Contacto
+      </h3>
+      <ul className="space-y-4">
+        {contactItems.map((item) => (
+          <li key={item.label}>
+            {item.href ? (
+              <a
+                href={item.href}
+                target={item.href.startsWith("http") ? "_blank" : undefined}
+                rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                className="flex items-center gap-3 text-slate-300 hover:text-brand-cyan transition-all group"
+              >
+                <span className="p-2 rounded-lg bg-surface-700/50 border border-border-500 group-hover:border-brand-cyan/30 group-hover:bg-brand-cyan/5 transition-all">
+                  <item.icon size={16} className="text-brand-cyan shrink-0" />
+                </span>
+                <div>
+                  <p className="text-xs text-slate-500">{item.label}</p>
+                  <p className="text-sm">{item.value}</p>
+                </div>
+              </a>
+            ) : (
+              <div className="flex items-center gap-3 text-slate-300">
+                <span className="p-2 rounded-lg bg-surface-700/50 border border-border-500">
+                  <item.icon size={16} className="text-brand-cyan shrink-0" />
+                </span>
+                <div>
+                  <p className="text-xs text-slate-500">{item.label}</p>
+                  <p className="text-sm">{item.value}</p>
+                </div>
+              </div>
+            )}
+          </li>
+        ))}
       </ul>
-    </Card>
+    </div>
   )
 }
 

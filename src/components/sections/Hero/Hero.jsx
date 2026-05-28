@@ -1,4 +1,5 @@
 import SocialIcon from "../../ui/SocialIcon"
+import { Download, ChevronDown } from "lucide-react"
 
 const Hero = ({ onScroll }) => {
   return (
@@ -36,16 +37,14 @@ const Hero = ({ onScroll }) => {
         {/* Role */}
         <div className="mb-8 animate-fade-in-up opacity-0" style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}>
           <span className="text-2xl md:text-4xl font-bold text-slate-200">
-            Backend <span className="text-brand-cyan">&</span> Fullstack Developer
+            <span className="text-brand-cyan">Desarrollador web</span>
           </span>
         </div>
 
         {/* Description */}
         <p className="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-10 animate-fade-in-up opacity-0" style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}>
-          Especializado en{" "}
-          <span className="text-brand-cyan font-semibold">backend</span> con
-          Node.js y NestJS, APIs REST y sistemas fullstack. Construyo soluciones
-          escalables de principio a fin.
+          Desarrollo proyectos backend y fullstack utilizando Node.js, NestJS y React.
+          Interesado en crear aplicaciones funcionales, mantenibles y escalables.
         </p>
 
         {/* Buttons */}
@@ -56,6 +55,15 @@ const Hero = ({ onScroll }) => {
           >
             Ver Proyectos
           </button>
+
+          <a
+            href="/cv.pdf"
+            download
+            className="inline-flex items-center gap-2 px-8 py-4 border border-brand-amber/50 text-brand-amber rounded-lg font-medium hover:bg-brand-amber/10 hover:border-brand-amber transition-all"
+          >
+            <Download size={18} />
+            Currículum
+          </a>
 
           <button
             onClick={() => onScroll("contact")}
@@ -70,8 +78,13 @@ const Hero = ({ onScroll }) => {
           <SocialIcon icon="github" />
           <SocialIcon icon="linkedin" />
           <SocialIcon icon="tiktok" />
-          <SocialIcon icon="mail" />
         </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500 animate-fade-in-up opacity-0" style={{ animationDelay: "1s", animationFillMode: "forwards" }}>
+        <span className="text-xs font-medium tracking-widest uppercase">Scroll</span>
+        <ChevronDown size={20} className="animate-bounce" />
       </div>
     </section>
   )

@@ -6,7 +6,7 @@ const Projects = () => {
   const [titleRef, titleVisible] = useReveal()
 
   return (
-    <section id="projects" className="min-h-screen bg-deep-800 py-24 px-6 text-white">
+    <section id="projects" className="bg-deep-800 py-24 px-6 text-white">
       <div className="max-w-7xl mx-auto">
         <div
           ref={titleRef}
@@ -20,7 +20,7 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
           {projectsData.map((project, index) => (
             <ProjectCard key={index} project={project} index={index} />
           ))}

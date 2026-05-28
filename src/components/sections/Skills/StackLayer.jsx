@@ -30,8 +30,8 @@ const StackLayer = ({ category, index }) => {
     >
       {/* Connecting line between layers (except first) */}
       {index > 0 && (
-        <div className="flex justify-center h-6">
-          <div className="w-px h-full bg-gradient-to-b from-border-400 to-transparent" />
+        <div className="flex justify-center h-8">
+          <div className="w-px h-full bg-gradient-to-b from-border-400 via-border-400/50 to-transparent" />
         </div>
       )}
 
@@ -54,7 +54,7 @@ const StackLayer = ({ category, index }) => {
             {category.skills.map((skill, i) => (
               <span
                 key={i}
-                className="px-3 py-1.5 text-xs font-mono rounded-md bg-deep-900/60 border border-border-500 text-slate-300 hover:border-brand-cyan/50 hover:text-brand-cyan transition-colors"
+                className="px-3 py-1.5 text-xs font-mono rounded-md bg-deep-900/60 border border-border-500 text-slate-300 hover:border-brand-cyan/50 hover:text-brand-cyan hover:shadow-sm hover:shadow-brand-cyan/20 transition-all"
               >
                 {skill}
               </span>

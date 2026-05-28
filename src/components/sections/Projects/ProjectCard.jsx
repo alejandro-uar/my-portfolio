@@ -60,16 +60,17 @@ const ProjectCard = ({ project, index }) => {
         </div>
 
         <div className="flex gap-3 mt-2">
-          <a
-            href={project.codeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 border border-border-400 rounded-lg text-sm hover:bg-surface-700 transition text-slate-300"
-          >
-            <Github size={16} />
-            Código
-          </a>
-
+          {project.githubUrl && (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 border border-border-400 rounded-lg text-sm hover:bg-surface-700 hover:border-brand-cyan/50 transition text-slate-300"
+            >
+              <Github size={16} />
+              Código
+            </a>
+          )}
           <a
             href={project.demoUrl}
             target="_blank"

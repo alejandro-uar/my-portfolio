@@ -1,46 +1,45 @@
 const projectsData = [
   {
-    title: "Sistema de Gestión Ailux",
+    title: "Scraper Jobs Salta",
     description:
-      "Sistema integral de gestión de turnos y finanzas para salón de uñas. Automatiza la gestión de ganancias y agenda de turnos.",
+      "Plataforma de empleos enfocada en la provincia de Salta que centraliza ofertas laborales mediante scraping automatizado y una API REST. Orientada tanto a perfiles profesionales como a empleos operativos y oficios, con la idea de integrar más portales y fuentes de búsqueda a futuro.",
     highlights: [
-      "Optimización del 90% en eficiencia operativa",
-      "Reportes financieros en tiempo real",
-      "Gestión automatizada de turnos",
+      "Scraping automático de ofertas laborales",
+      "Búsqueda y filtrado inteligente de empleos",
+      "Arquitectura fullstack con API REST",
     ],
-    tech: ["NestJS", "TypeORM", "PostgreSQL", "React", "TypeScript"],
-    image: "/projects/ailux.jpg",
-    codeUrl: "#",
-    demoUrl: "#",
+    tech: [
+      "NestJS",
+      "TypeORM",
+      "PostgreSQL",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+    ],
+    image: "/projects/scraper-jobs.jpg",
+    demoUrl: "https://scraper-frontend-salta.vercel.app/",
+    githubUrl: "https://github.com/alejandro-luna/scraper-jobs-salta",
   },
   {
-    title: "Integración de Pagos MercadoPago",
+    title: "MyCloset",
     description:
-      "Implementación completa del flujo de pagos incluyendo validación de transacciones, facturación y webhooks.",
+      "Plataforma colaborativa que transforma el vestuario físico en un clóset digital inteligente, optimizando la creación de outfits diarios. Como responsable del backend, diseñé la arquitectura de servicios y la lógica de negocio que hacen posible una experiencia de usuario fluida, segura y automatizada desde el registro hasta el procesamiento de pagos.",
     highlights: [
-      "Transacciones seguras",
-      "Validación de datos financieros",
-      "Manejo de webhooks",
+      "Autenticación segura con JWT y OAuth 2.0 (Google) con persistencia vía cookies",
+      "Integración de pasarela de pago y automatización de notificaciones por mail",
+      "Diseño de base de datos relacional y documentación completa de la API REST",
     ],
-    tech: ["Node.js", "Express", "PostgreSQL", "React", "MercadoPago API"],
-    image: "/projects/mercadopago.jpg",
-    codeUrl: "#",
-    demoUrl: "#",
-  },
-  {
-    title: "Componentes Escalables MONETAE",
-    description:
-      "Desarrollo de componentes UI escalables usando Atomic Design e integración frontend-backend.",
-    highlights: [
-      "Arquitectura Atomic Design",
-      "Código reutilizable",
-      "Integración fluida",
+    tech: [
+      "Nestjs",
+      "PostgreSQL",
+      "MercadoPago API",
+      "JWT",
+      "Swagger",
     ],
-    tech: ["Next.js", "Tailwind CSS", "Storybook", "TypeScript"],
-    image: "/projects/monetae.jpg",
-    codeUrl: "#",
-    demoUrl: "#",
+    image: "/projects/my-closet.jpg", 
+    demoUrl: "https://mycloset57.vercel.app/",
+    githubUrl: "https://github.com/alejandro-luna/mycloset",
   },
-]
+];
 
 export default projectsData

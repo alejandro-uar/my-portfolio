@@ -5,10 +5,16 @@ import AboutAvailability from "./AboutAvailability"
 
 const About = () => {
   const [titleRef, titleVisible] = useReveal()
+  const [profileRef, profileVisible] = useReveal()
+  const [infoRef, infoVisible] = useReveal()
 
   return (
-    <section id="about" className="min-h-screen bg-deep-800 text-white py-24 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section id="about" className="relative bg-deep-800 text-white py-24 px-6 overflow-hidden">
+      {/* Decorative accents */}
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-brand-violet/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-brand-cyan/5 rounded-full blur-3xl" />
+
+      <div className="relative z-10 max-w-6xl mx-auto">
         <div
           ref={titleRef}
           className={`text-center mb-16 ${titleVisible ? "animate-fade-in-up" : "opacity-0"}`}
@@ -16,16 +22,24 @@ const About = () => {
           <h2 className="text-4xl md:text-5xl font-black tracking-tight">
             Sobre <span className="text-brand-violet">Mí</span>
           </h2>
+          <p className="text-slate-400 mt-4 max-w-2xl mx-auto">
+            Conoce más sobre mi trayectoria, experiencia y lo que me motiva
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2">
-            <AboutProfile />
-          </div>
-          <div className="flex flex-col gap-8">
-            <AboutContact />
-            <AboutAvailability />
-          </div>
+        <div
+          ref={profileRef}
+          className={`transition-all duration-700 ${profileVisible ? "animate-fade-in-up" : "opacity-0"}`}
+        >
+          <AboutProfile />
+        </div>
+
+        <div
+          ref={infoRef}
+          className={`mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 transition-all duration-700 ${infoVisible ? "animate-fade-in-up" : "opacity-0"}`}
+        >
+          <AboutContact />
+          <AboutAvailability />
         </div>
       </div>
     </section>

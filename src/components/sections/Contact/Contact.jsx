@@ -7,7 +7,7 @@ const Contact = () => {
   const [titleRef, titleVisible] = useReveal()
 
   return (
-    <section id="contact" className="min-h-screen bg-deep-800 py-24 px-6">
+    <section id="contact" className="bg-deep-800 py-24 px-6">
       <div className="max-w-6xl mx-auto text-white">
         <div
           ref={titleRef}
