@@ -1,5 +1,5 @@
 import useReveal from "../../../hooks/useReveal"
-import ProjectCard from "./ProjectCard"
+import ProjectsCarousel from "./ProjectsCarousel"
 import projectsData from "./projectsData"
 
 const Projects = () => {
@@ -20,15 +20,7 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 items-stretch">
-          {projectsData.map((project, index) => (
-            <ProjectCard
-              key={index}
-              project={project}
-              index={index}
-            />
-          ))}
-        </div>
+        <ProjectsCarousel projects={projectsData} />
       </div>
     </section>
   )
