@@ -21,6 +21,28 @@ const projectsData = [
     githubUrl: "https://github.com/alejandro-luna/scraper-jobs-salta",
   },
   {
+    title: "ByteFix",
+    description:
+      "Sistema de gestión de turnos para un servicio técnico de reparación y ensamblaje de PC. Permite a los clientes registrarse, agendar turnos dentro de los horarios laborales y cancelarlos con anticipación. Cuenta con autenticación de usuarios, validación de reglas de negocio y una API REST conectada a Supabase como base de datos PostgreSQL.",
+    highlights: [
+      "Agendamiento y cancelación de turnos en tiempo real",
+      "Autenticación de usuarios con registro y login",
+      "Base de datos PostgreSQL hosteada en Supabase con TypeORM",
+    ],
+    tech: [
+      "Express",
+      "TypeORM",
+      "Supabase (PostgreSQL)",
+      "React",
+      "Vite",
+      "TypeScript",
+      "CSS Modules",
+    ],
+    image: "/projects/bytefix.jpg",
+    demoUrl: "https://bytefix-front.vercel.app/",
+    githubUrl: "",
+  },
+  {
     title: "MyCloset",
     description:
       "Plataforma colaborativa que transforma el vestuario físico en un clóset digital inteligente, optimizando la creación de outfits diarios. Como responsable del backend, diseñé la arquitectura de servicios y la lógica de negocio que hacen posible una experiencia de usuario fluida, segura y automatizada desde el registro hasta el procesamiento de pagos.",

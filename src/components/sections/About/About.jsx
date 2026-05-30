@@ -22,7 +22,7 @@ const About = () => {
           <h2 className="text-4xl md:text-5xl font-black tracking-tight">
             Sobre <span className="text-brand-violet">Mí</span>
           </h2>
-          <p className="text-slate-400 mt-4 max-w-2xl mx-auto">
+          <p className="text-slate-400 mt-6 max-w-2xl mx-auto">
             Conoce más sobre mi trayectoria, experiencia y lo que me motiva
           </p>
         </div>

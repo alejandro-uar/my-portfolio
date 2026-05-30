@@ -13,7 +13,7 @@ const ProjectCard = ({ project, index }) => {
   return (
     <div
       ref={ref}
-      className={`bg-deep-800/80 backdrop-blur border border-border-500 rounded-2xl overflow-hidden hover:scale-[1.02] hover:shadow-xl hover:shadow-brand-cyan/5 transition-all ${
+      className={`bg-deep-800/80 backdrop-blur border border-border-500 rounded-2xl overflow-hidden flex flex-col hover:scale-[1.02] hover:shadow-xl hover:shadow-brand-cyan/5 transition-all ${
         isVisible ? "animate-fade-in-up" : "opacity-0"
       }`}
       style={{ animationDelay: `${index * 0.15}s` }}
@@ -28,7 +28,7 @@ const ProjectCard = ({ project, index }) => {
         </span>
       </div>
 
-      <div className="p-6 flex flex-col gap-4">
+      <div className="p-6 flex flex-col gap-4 flex-1">
         <h3 className="text-xl font-bold text-white font-heading">
           {project.title}
         </h3>
@@ -59,23 +59,12 @@ const ProjectCard = ({ project, index }) => {
           ))}
         </div>
 
-        <div className="flex gap-3 mt-2">
-          {project.githubUrl && (
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 border border-border-400 rounded-lg text-sm hover:bg-surface-700 hover:border-brand-cyan/50 transition text-slate-300"
-            >
-              <Github size={16} />
-              Código
-            </a>
-          )}
+        <div className="flex gap-3 mt-auto pt-3">
           <a
             href={project.demoUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-brand-violet to-brand-cyan rounded-lg text-sm hover:shadow-lg hover:shadow-brand-cyan/20 transition-all"
+            className="flex justify-center w-full gap-2 px-4 py-2 bg-gradient-to-r from-brand-violet to-brand-cyan rounded-lg text-sm hover:shadow-lg hover:shadow-brand-cyan/20 transition-all"
           >
             <ExternalLink size={16} />
             Demo

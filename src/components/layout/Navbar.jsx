@@ -20,21 +20,14 @@ const Navbar = ({ onScroll }) => {
 
   return (
     <header className="fixed top-0 w-full z-50 backdrop-blur-md bg-deep-900/70 border-b border-border-500">
-      <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <div
-          onClick={() => onScroll("hero")}
-          className="text-xl font-bold text-brand-cyan font-heading cursor-pointer tracking-tight"
-        >
-          AL<span className="text-brand-violet">.</span>
-        </div>
-
+      <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-center relative">
         {/* Desktop */}
         <ul className="hidden md:flex items-center gap-8 text-slate-300 font-medium text-sm">
           {navItems.map((item) => (
             <li
               key={item.id}
               onClick={() => onScroll(item.id)}
-              className="cursor-pointer hover:text-brand-cyan transition"
+              className="cursor-pointer relative px-1 py-1 hover:text-brand-cyan transition after:absolute after:bottom-[-2px] after:left-0 after:h-[2px] after:w-0 after:bg-brand-cyan after:transition-all after:duration-300 hover:after:w-full"
             >
               {item.label}
             </li>
@@ -44,7 +37,7 @@ const Navbar = ({ onScroll }) => {
         {/* Mobile toggle */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-slate-200 p-2 hover:text-brand-cyan transition"
+          className="md:hidden absolute right-6 text-slate-200 p-2 hover:text-brand-cyan transition"
           aria-label="Menú"
         >
           {open ? <X size={24} /> : <Menu size={24} />}
