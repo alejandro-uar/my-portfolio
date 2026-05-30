@@ -21,6 +21,26 @@ const projectsData = [
     githubUrl: "",
   },
   {
+    title: "Carnicería Moldes",
+    description:
+      "Sistema de punto de venta (POS) y administración para una carnicería que carecía de un sistema facturador. Digitaliza por completo el registro de ventas diarias, reemplazando el proceso manual de sumar fila por fila, y permite gestionar productos, controlar ingresos por método de pago y administrar el catálogo de cortes con precios actualizados. Desarrollado como MVP funcional con miras a incorporar facturación electrónica y módulo de pedidos a futuro.",
+    highlights: [
+      "POS interactivo con búsqueda de productos y cálculo de precio por peso en kg",
+      "Panel administrativo con catálogo de productos y reporte de ventas filtrado por método de pago",
+      "Mock API integrada con datos de prueba para demostración sin backend",
+    ],
+    tech: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "React Router",
+      "JavaScript (JSX)",
+    ],
+    image: "/projects/carniceria.jpg",
+    demoUrl: "https://carniceria-frontend-five.vercel.app/",
+    githubUrl: "",
+  },
+  {
     title: "ByteFix",
     description:
       "Sistema de gestión de turnos para un servicio técnico de reparación y ensamblaje de PC. Permite a los clientes registrarse, agendar turnos dentro de los horarios laborales y cancelarlos con anticipación. Cuenta con autenticación de usuarios, validación de reglas de negocio y una API REST conectada a Supabase como base de datos PostgreSQL.",
@@ -40,26 +60,6 @@ const projectsData = [
     ],
     image: "/projects/bytefix.jpg",
     demoUrl: "https://bytefix-front.vercel.app/",
-    githubUrl: "",
-  },
-  {
-    title: "Carnicería Moldes",
-    description:
-      "Sistema de punto de venta (POS) y administración para una carnicería que carecía de un sistema facturador. Digitaliza por completo el registro de ventas diarias, reemplazando el proceso manual de sumar fila por fila, y permite gestionar productos, controlar ingresos por método de pago y administrar el catálogo de cortes con precios actualizados. Desarrollado como MVP funcional con miras a incorporar facturación electrónica y módulo de pedidos a futuro.",
-    highlights: [
-      "POS interactivo con búsqueda de productos y cálculo de precio por peso en kg",
-      "Panel administrativo con catálogo de productos y reporte de ventas filtrado por método de pago",
-      "Mock API integrada con datos de prueba para demostración sin backend",
-    ],
-    tech: [
-      "React",
-      "Vite",
-      "Tailwind CSS",
-      "React Router",
-      "JavaScript (JSX)",
-    ],
-    image: "/projects/carniceria.jpg",
-    demoUrl: "",
     githubUrl: "",
   },
   {

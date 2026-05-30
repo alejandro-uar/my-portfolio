@@ -22,10 +22,6 @@ const Footer = () => {
               <Mail size={16} className="text-brand-cyan" />
               <span>{footerInfo.email}</span>
             </div>
-            <div className="flex items-center gap-2 text-sm">
-              <Phone size={16} className="text-brand-cyan" />
-              <span>{footerInfo.phone}</span>
-            </div>
           </FooterColumn>
 
           <FooterColumn title="Redes Sociales">

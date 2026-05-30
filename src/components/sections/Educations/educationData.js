@@ -1,5 +1,11 @@
 const educationData = [
   {
+    title: "Técnico universitario en infraestructuras Cloud & Devops",
+    institution: "UPATECO - Universidad Provincial de Tecnología y Ciencias Aplicadas",
+    period: "2026 - en curso",
+    type: "Técnico Universitario",
+  },
+  {
     title: "Full Stack Web Developer",
     subtitle: "Especialidad Backend",
     institution: "Henry Bootcamp",

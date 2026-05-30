@@ -9,7 +9,7 @@ const availabilityItems = [
   {
     icon: Clock,
     label: "Modalidad",
-    value: "Remoto / Presencial (Salta)"
+    value: "Remoto / Presencial"
   },
   {
     icon: Zap,

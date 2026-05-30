@@ -52,7 +52,7 @@ const Hero = ({ onScroll }) => {
 
           <a
             href="/cv.pdf"
-            download
+            download="AlejandroLuna-cv"
             className="inline-flex items-center gap-2 px-8 py-4 border border-brand-amber/50 text-brand-amber rounded-lg font-medium hover:bg-brand-amber/10 hover:border-brand-amber transition-all"
           >
             <Download size={18} />

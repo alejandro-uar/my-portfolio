@@ -20,7 +20,7 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
+        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 items-stretch">
           {projectsData.map((project, index) => (
             <ProjectCard
               key={index}
