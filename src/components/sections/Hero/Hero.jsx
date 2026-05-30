@@ -19,14 +19,6 @@ const Hero = ({ onScroll }) => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-cyan/5 rounded-full blur-3xl" />
 
       <div className="relative z-10 text-center max-w-5xl px-4">
-        {/* Badge */}
-        <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-brand-emerald/10 border border-brand-emerald/30 mb-8 animate-fade-in-up opacity-0" style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}>
-          <span className="w-2 h-2 bg-brand-emerald rounded-full animate-pulse" />
-          <span className="text-brand-emerald font-semibold text-sm">
-            Disponible para nuevos proyectos
-          </span>
-        </div>
-
         {/* Name */}
         <h1 className="text-5xl sm:text-6xl md:text-8xl font-black mb-4 tracking-tight animate-fade-in-up opacity-0" style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}>
           <span className="bg-gradient-to-r from-brand-violet via-brand-cyan to-brand-emerald bg-clip-text text-transparent">
@@ -37,7 +29,9 @@ const Hero = ({ onScroll }) => {
         {/* Role */}
         <div className="mb-8 animate-fade-in-up opacity-0" style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}>
           <span className="text-2xl md:text-4xl font-bold text-slate-200">
-            <span className="text-brand-cyan">Desarrollador web</span>
+            <span className="text-brand-cyan">Téc. Informática</span>
+            <span className="text-slate-400 mx-2">&</span>
+            <span className="text-brand-cyan">Web Developer</span>
           </span>
         </div>
 
@@ -74,7 +68,7 @@ const Hero = ({ onScroll }) => {
         </div>
 
         {/* Social */}
-        <div className="mt-14 flex justify-center gap-6 animate-fade-in-up opacity-0" style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}>
+        <div className="mt-8 flex justify-center gap-6 animate-fade-in-up opacity-0" style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}>
           <SocialIcon icon="github" />
           <SocialIcon icon="linkedin" />
           <SocialIcon icon="tiktok" />
@@ -82,7 +76,7 @@ const Hero = ({ onScroll }) => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500 animate-fade-in-up opacity-0" style={{ animationDelay: "1s", animationFillMode: "forwards" }}>
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-slate-500 animate-fade-in-up opacity-0" style={{ animationDelay: "1s", animationFillMode: "forwards" }}>
         <span className="text-xs font-medium tracking-widest uppercase">Scroll</span>
         <ChevronDown size={20} className="animate-bounce" />
       </div>

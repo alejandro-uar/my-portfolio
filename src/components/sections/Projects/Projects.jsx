@@ -20,9 +20,13 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
           {projectsData.map((project, index) => (
-            <ProjectCard key={index} project={project} index={index} />
+            <ProjectCard
+              key={index}
+              project={project}
+              index={index}
+            />
           ))}
         </div>
       </div>

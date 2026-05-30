@@ -18,7 +18,7 @@ const projectsData = [
     ],
     image: "/projects/scraper-jobs.jpg",
     demoUrl: "https://scraper-frontend-salta.vercel.app/",
-    githubUrl: "https://github.com/alejandro-luna/scraper-jobs-salta",
+    githubUrl: "",
   },
   {
     title: "ByteFix",
@@ -43,6 +43,26 @@ const projectsData = [
     githubUrl: "",
   },
   {
+    title: "Carnicería Moldes",
+    description:
+      "Sistema de punto de venta (POS) y administración para una carnicería que carecía de un sistema facturador. Digitaliza por completo el registro de ventas diarias, reemplazando el proceso manual de sumar fila por fila, y permite gestionar productos, controlar ingresos por método de pago y administrar el catálogo de cortes con precios actualizados. Desarrollado como MVP funcional con miras a incorporar facturación electrónica y módulo de pedidos a futuro.",
+    highlights: [
+      "POS interactivo con búsqueda de productos y cálculo de precio por peso en kg",
+      "Panel administrativo con catálogo de productos y reporte de ventas filtrado por método de pago",
+      "Mock API integrada con datos de prueba para demostración sin backend",
+    ],
+    tech: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "React Router",
+      "JavaScript (JSX)",
+    ],
+    image: "/projects/carniceria.jpg",
+    demoUrl: "",
+    githubUrl: "",
+  },
+  {
     title: "MyCloset",
     description:
       "Plataforma colaborativa que transforma el vestuario físico en un clóset digital inteligente, optimizando la creación de outfits diarios. Como responsable del backend, diseñé la arquitectura de servicios y la lógica de negocio que hacen posible una experiencia de usuario fluida, segura y automatizada desde el registro hasta el procesamiento de pagos.",
@@ -60,7 +80,7 @@ const projectsData = [
     ],
     image: "/projects/my-closet.jpg", 
     demoUrl: "https://mycloset57.vercel.app/",
-    githubUrl: "https://github.com/alejandro-luna/mycloset",
+    githubUrl: "",
   },
 ];
 
