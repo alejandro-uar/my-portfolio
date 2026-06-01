@@ -17,7 +17,7 @@ const contactItems = [
     icon: Linkedin,
     label: "LinkedIn",
     value: "Alejandro Luna",
-    href: "https://www.linkedin.com/in/alejandro-luna"
+    href: "https://www.linkedin.com/in/alejandro-luna-72020b208/"
   },
   {
     icon: Github,
