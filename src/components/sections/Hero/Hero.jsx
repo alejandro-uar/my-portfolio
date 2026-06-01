@@ -29,7 +29,7 @@ const Hero = ({ onScroll }) => {
         {/* Role */}
         <div className="mb-8 animate-fade-in-up opacity-0" style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}>
           <span className="text-2xl md:text-4xl font-bold text-slate-200">
-            <span className="text-brand-cyan">Téc. Informática</span>
+            <span className="text-brand-cyan">Téc. Informático</span>
             <span className="text-slate-400 mx-2">&</span>
             <span className="text-brand-cyan">Web Developer</span>
           </span>
