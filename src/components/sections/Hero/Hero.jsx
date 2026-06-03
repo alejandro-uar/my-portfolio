@@ -66,13 +66,6 @@ const Hero = ({ onScroll }) => {
             Contactar
           </button>
         </div>
-
-        {/* Social */}
-        <div className="mt-8 flex justify-center gap-6 animate-fade-in-up opacity-0" style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}>
-          <SocialIcon icon="github" />
-          <SocialIcon icon="linkedin" />
-          <SocialIcon icon="tiktok" />
-        </div>
       </div>
 
       {/* Scroll indicator */}
