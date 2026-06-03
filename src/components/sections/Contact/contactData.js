@@ -19,7 +19,7 @@ export const socialLinks = [
   },
   {
     name: "GitHub",
-    url: "https://github.com/alejandro-luna",
+    url: "https://github.com/alejandro-uar",
     icon: "github",
   },
   {
